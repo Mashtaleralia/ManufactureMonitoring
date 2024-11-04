@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0E77B2253098A71D03684C /* Pods_ManufactureMonitoring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62218CF478E714073530195B /* Pods_ManufactureMonitoring.framework */; };
 		840447052CD6323B0025D057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840447042CD6323B0025D057 /* AppDelegate.swift */; };
 		840447072CD6323B0025D057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840447062CD6323B0025D057 /* SceneDelegate.swift */; };
 		840447092CD6323B0025D057 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840447082CD6323B0025D057 /* DetailsViewController.swift */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51DD3A92EB8D6942AC158430 /* Pods-ManufactureMonitoring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManufactureMonitoring.debug.xcconfig"; path = "Target Support Files/Pods-ManufactureMonitoring/Pods-ManufactureMonitoring.debug.xcconfig"; sourceTree = "<group>"; };
+		62218CF478E714073530195B /* Pods_ManufactureMonitoring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManufactureMonitoring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840447012CD6323B0025D057 /* ManufactureMonitoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManufactureMonitoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840447042CD6323B0025D057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840447062CD6323B0025D057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		8404470D2CD6323C0025D057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840447102CD6323C0025D057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840447122CD6323C0025D057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C864B9227FA2EC4F8650EB31 /* Pods-ManufactureMonitoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManufactureMonitoring.release.xcconfig"; path = "Target Support Files/Pods-ManufactureMonitoring/Pods-ManufactureMonitoring.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0E77B2253098A71D03684C /* Pods_ManufactureMonitoring.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3294B46022AA31CE64BB092D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62218CF478E714073530195B /* Pods_ManufactureMonitoring.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B75F8DD73C404B8CA7B086A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51DD3A92EB8D6942AC158430 /* Pods-ManufactureMonitoring.debug.xcconfig */,
+				C864B9227FA2EC4F8650EB31 /* Pods-ManufactureMonitoring.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		840446F82CD6323B0025D057 = {
 			isa = PBXGroup;
 			children = (
 				840447032CD6323B0025D057 /* ManufactureMonitoring */,
 				840447022CD6323B0025D057 /* Products */,
+				4B75F8DD73C404B8CA7B086A /* Pods */,
+				3294B46022AA31CE64BB092D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840447152CD6323C0025D057 /* Build configuration list for PBXNativeTarget "ManufactureMonitoring" */;
 			buildPhases = (
+				F4DA2888FC232E5826523256 /* [CP] Check Pods Manifest.lock */,
 				840446FD2CD6323B0025D057 /* Sources */,
 				840446FE2CD6323B0025D057 /* Frameworks */,
 				840446FF2CD6323B0025D057 /* Resources */,
+				420AC882DCAC8B6C88E57E5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,10 +174,53 @@
 			files = (
 				8404470E2CD6323C0025D057 /* Assets.xcassets in Resources */,
 				840447112CD6323C0025D057 /* Base in Resources */,
+				840447202CD91BDD0025D057 /* nasos.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		420AC882DCAC8B6C88E57E5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ManufactureMonitoring/Pods-ManufactureMonitoring-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ManufactureMonitoring/Pods-ManufactureMonitoring-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ManufactureMonitoring/Pods-ManufactureMonitoring-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4DA2888FC232E5826523256 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ManufactureMonitoring-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		840446FD2CD6323B0025D057 /* Sources */ = {
@@ -215,7 +284,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -278,7 +347,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -299,6 +368,7 @@
 		};
 		840447162CD6323C0025D057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51DD3A92EB8D6942AC158430 /* Pods-ManufactureMonitoring.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +395,7 @@
 		};
 		840447172CD6323C0025D057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C864B9227FA2EC4F8650EB31 /* Pods-ManufactureMonitoring.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
