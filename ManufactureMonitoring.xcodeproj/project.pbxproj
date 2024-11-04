@@ -13,6 +13,8 @@
 		840447092CD6323B0025D057 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840447082CD6323B0025D057 /* DetailsViewController.swift */; };
 		8404470E2CD6323C0025D057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8404470D2CD6323C0025D057 /* Assets.xcassets */; };
 		840447112CD6323C0025D057 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 840447102CD6323C0025D057 /* Base */; };
+		8404471F2CD900A90025D057 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404471E2CD900A90025D057 /* DBHelper.swift */; };
+		840447202CD91BDD0025D057 /* nasos.db in Resources */ = {isa = PBXBuildFile; fileRef = 8404471D2CD8FE520025D057 /* nasos.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		8404470D2CD6323C0025D057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840447102CD6323C0025D057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840447122CD6323C0025D057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8404471D2CD8FE520025D057 /* nasos.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nasos.db; sourceTree = "<group>"; };
+		8404471E2CD900A90025D057 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		C864B9227FA2EC4F8650EB31 /* Pods-ManufactureMonitoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManufactureMonitoring.release.xcconfig"; path = "Target Support Files/Pods-ManufactureMonitoring/Pods-ManufactureMonitoring.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,10 +82,12 @@
 		840447032CD6323B0025D057 /* ManufactureMonitoring */ = {
 			isa = PBXGroup;
 			children = (
+				8404471D2CD8FE520025D057 /* nasos.db */,
 				840447192CD69E030025D057 /* Views */,
 				840447182CD69DDE0025D057 /* Resources */,
 				8404471A2CD69E200025D057 /* ViewController */,
 				840447122CD6323C0025D057 /* Info.plist */,
+				8404471E2CD900A90025D057 /* DBHelper.swift */,
 			);
 			path = ManufactureMonitoring;
 			sourceTree = "<group>";
@@ -230,6 +236,7 @@
 				840447092CD6323B0025D057 /* DetailsViewController.swift in Sources */,
 				840447052CD6323B0025D057 /* AppDelegate.swift in Sources */,
 				840447072CD6323B0025D057 /* SceneDelegate.swift in Sources */,
+				8404471F2CD900A90025D057 /* DBHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
