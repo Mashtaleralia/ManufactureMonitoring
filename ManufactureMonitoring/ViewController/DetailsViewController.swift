@@ -12,6 +12,13 @@ class DetailsViewController: UIViewController {
     private var detailView: DetailsView
     private var presenter: DetailsViewPresenter
     
+    private let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.placeholder = "Поиск детали"
+        searchBar.showsCancelButton = true
+        return searchBar
+    }()
+    
     init(detailView: DetailsView, presenter: DetailsViewPresenter) {
         self.detailView = detailView
         self.presenter = presenter
@@ -29,14 +36,15 @@ class DetailsViewController: UIViewController {
         detailView.delegate = self
         addConstraints()
         title = "Детали"
+        searchBar.delegate = self
         //setUpView()
-        print(DBHelper.shared.detail(by: "1417"))
+        navigationItem.titleView = searchBar
+        print(DBHelper.shared.details(name: "Пята"))
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    private func setUpView() {
-       
-        
+    private func searchByName(_ text: String) {
+        presenter.performSearch(by: text)
     }
     
     private func addConstraints() {
@@ -46,6 +54,20 @@ class DetailsViewController: UIViewController {
             detailView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             detailView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+    
+}
+
+extension DetailsViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        print(searchBar.text)
+        searchByName(searchBar.text ?? "")
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        presenter.isSearching = false
+        detailView.collectionView.reloadData()
     }
     
 }
