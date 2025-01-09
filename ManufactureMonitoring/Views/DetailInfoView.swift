@@ -58,11 +58,7 @@ class DetailInfoView: UIView {
         return label
     }()
     
-    private var parentControl: UIControl = {
-        let control = UIControl()
-        control.translatesAutoresizingMaskIntoConstraints = false
-        return control
-    }()
+    private var parentControl = ParentControl()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,6 +69,7 @@ class DetailInfoView: UIView {
         stackView.addArrangedSubview(typeLabel)
         
         addSubview(stackView)
+        addSubview(parentControl)
         addConstraints()
         translatesAutoresizingMaskIntoConstraints = false
     }
@@ -101,6 +98,10 @@ class DetailInfoView: UIView {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             stackView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/3),
+            parentControl.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 15),
+            parentControl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            parentControl.widthAnchor.constraint(equalToConstant: 100),
+            parentControl.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
