@@ -52,6 +52,20 @@ class DBHelper {
         return detail
     }
     
+    func details(name: String) -> [Detail] {
+        var searchResult = [Detail]()
+        do {
+            for row in try db.prepare("SELECT * FROM mytable WHERE Name LIKE '%\(name)%'") {
+                let detail = Detail(Name: row[0] as! String, id: row[1] as! String, id_2: row[2] as! Int64, id_3: row[3] as! Int64, parent: row[4] as! Int64, dur: row[5] as! Int64, t_sht: row[6] as! Double, t_pz: row[7] as! Double, party: row[8] as! Double, _tr: row[9] as! String, twenty: row[10] as! String)
+                //print(detail)
+                searchResult.append(detail)
+            }
+        } catch {
+            print(error)
+        }
+        return searchResult
+    }
+    
     
     
 //    func query() {
