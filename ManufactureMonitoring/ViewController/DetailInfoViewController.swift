@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailInfoViewController: UIViewController {
+class DetailInfoViewController: UIViewController, DetailInfoViewDelegate {
 
     private var detailInfoView: DetailInfoView
     private var presenter: DetailInfoViewPresenter
@@ -17,6 +17,7 @@ class DetailInfoViewController: UIViewController {
         title = "Информация"
         view.backgroundColor = Colors.background
         detailInfoView.configure()
+        detailInfoView.delegate = self
         view.addSubview(detailInfoView)
         addConstraints()
     }
@@ -39,6 +40,10 @@ class DetailInfoViewController: UIViewController {
             detailInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             detailInfoView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+    
+    func presentVC(_ vc: UIViewController) {
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

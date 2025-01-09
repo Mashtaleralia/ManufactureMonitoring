@@ -11,6 +11,8 @@ class DetailInfoView: UIView {
 
     weak var presenter: DetailInfoViewPresenter!
     
+    weak var delegate: DetailInfoViewDelegate?
+    
     private let stackView: UIStackView = {
         let stack = UIStackView()
         stack.backgroundColor = Colors.lightBlue
