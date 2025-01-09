@@ -74,5 +74,13 @@ extension DetailsView: UITableViewDelegate, UITableViewDataSource {
         UIScreen.main.bounds.height / 8
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let detail = presenter.detailAtIndex(indexPath.row)
+        let presenter = DetailInfoViewPresenter(detail: detail)
+        let vc = DetailInfoViewController(presenter: presenter)
+        vc.navigationController?.navigationBar.prefersLargeTitles = true
+        delegate?.presentVC(vc)
+    }
     
 }
