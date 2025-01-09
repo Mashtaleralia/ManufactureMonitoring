@@ -72,10 +72,19 @@ class DetailInfoView: UIView {
         addSubview(parentControl)
         addConstraints()
         translatesAutoresizingMaskIntoConstraints = false
+        parentControl.addTarget(self, action: #selector(moveToParent), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc private func moveToParent() {
+        if let parent = presenter.getParent() {
+            let presenter = DetailInfoViewPresenter(detail: parent)
+            let vc = DetailInfoViewController(presenter: presenter)
+            delegate?.presentVC(vc)
+        }
     }
     
     public func configure() {
