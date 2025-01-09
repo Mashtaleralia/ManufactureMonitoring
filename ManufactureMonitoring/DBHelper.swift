@@ -20,20 +20,24 @@ class DBHelper {
         self.db = try! Connection(dbPath)
     }
     
-    public func connected() {
+    func connected() {
         print("connected")
     }
     
-    public func selectAllDetails() {
+    func fetchAllDetails() -> [Detail] {
+        var details = [Detail]()
         do {
-            for row in try db.prepare("SELECT name, id FROM mytable") {
-                    print("name: \(row[0]), id: \(row[1])")
-                    // id: Optional(2), email: Optional("betty@icloud.com")
-                    // id: Optional(3), email: Optional("cathy@icloud.com")
-                }
+            for row in try db.prepare("SELECT * FROM mytable") {
+               
+                let detail = Detail(Name: row[0] as! String, id: row[1] as! String, id_2: row[2] as! Int64, id_3: row[3] as! Int64, parent: row[4] as! Int64, dur: row[5] as! Int64, t_sht: row[6] as! Double, t_pz: row[7] as! Double, party: row[8] as! Double, _tr: row[9] as! String, twenty: row[10] as! String)
+                print(detail)
+                details.append(detail)
+            }
+            
         } catch {
             print(error)
         }
+        return details
     }
     
     
