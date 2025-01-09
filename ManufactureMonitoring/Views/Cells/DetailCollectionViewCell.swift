@@ -7,29 +7,34 @@
 
 import UIKit
 
-class DetailTableViewCell: UITableViewCell {
+class DetailCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "DetailTableViewCell"
     
     private let idLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = .systemFont(ofSize: 16, weight: .semibold)
+        label.textColor = Colors.grey
+        //label.backgroundColor = Colors.lightGrey
+       // label.textAlignment = .center
         return label
     }()
     
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = .systemFont(ofSize: 16, weight: .semibold)
         return label
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         addSubview(nameLabel)
         addSubview(idLabel)
         setUpConstraints()
+        layer.cornerRadius = 14
+        backgroundColor = Colors.background
     }
     
     required init?(coder: NSCoder) {
@@ -38,12 +43,12 @@ class DetailTableViewCell: UITableViewCell {
     
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
-            idLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15),
-            idLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
-            idLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -7),
-            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 15),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -7),
+            idLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
+            idLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            idLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -7),
         ])
     }
     
