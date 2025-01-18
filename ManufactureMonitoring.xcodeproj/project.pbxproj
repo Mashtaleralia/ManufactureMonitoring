@@ -27,6 +27,7 @@
 		84819CA12D2FD47A002FCA86 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84819CA02D2FD47A002FCA86 /* Colors.swift */; };
 		84D9C6112D3C1F86007A2EED /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9C6102D3C1F86007A2EED /* TabBarController.swift */; };
 		84D9C6142D3C2CDC007A2EED /* Ganttis in Frameworks */ = {isa = PBXBuildFile; productRef = 84D9C6132D3C2CDC007A2EED /* Ganttis */; };
+		84D9C6162D3C3063007A2EED /* TechnicalProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9C6152D3C3063007A2EED /* TechnicalProcessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		84819C9E2D2C6412002FCA86 /* ParentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentControl.swift; sourceTree = "<group>"; };
 		84819CA02D2FD47A002FCA86 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		84D9C6102D3C1F86007A2EED /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		84D9C6152D3C3063007A2EED /* TechnicalProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalProcessViewController.swift; sourceTree = "<group>"; };
 		C864B9227FA2EC4F8650EB31 /* Pods-ManufactureMonitoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManufactureMonitoring.release.xcconfig"; path = "Target Support Files/Pods-ManufactureMonitoring/Pods-ManufactureMonitoring.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				840447082CD6323B0025D057 /* DetailsViewController.swift */,
 				84819C962D2955CF002FCA86 /* DetailInfoViewController.swift */,
 				84D9C6102D3C1F86007A2EED /* TabBarController.swift */,
+				84D9C6152D3C3063007A2EED /* TechnicalProcessViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				84819C952D25E317002FCA86 /* DetailCollectionViewCell.swift in Sources */,
 				84819C9F2D2C6412002FCA86 /* ParentControl.swift in Sources */,
 				840447052CD6323B0025D057 /* AppDelegate.swift in Sources */,
+				84D9C6162D3C3063007A2EED /* TechnicalProcessViewController.swift in Sources */,
 				84819C922D25DD25002FCA86 /* DetailsViewPresenter.swift in Sources */,
 				840447072CD6323B0025D057 /* SceneDelegate.swift in Sources */,
 				8404471F2CD900A90025D057 /* DBHelper.swift in Sources */,
