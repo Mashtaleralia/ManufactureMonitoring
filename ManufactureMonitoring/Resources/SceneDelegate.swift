@@ -15,10 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: scene)
-        let detailView = DetailsView()
-        let presenter = DetailsViewPresenter(view: detailView)
-        detailView.presenter = presenter
-        window.rootViewController = UINavigationController(rootViewController: DetailsViewController(detailView: detailView, presenter: presenter))
+//        let detailView = DetailsView()
+//        let presenter = DetailsViewPresenter(view: detailView)
+//        detailView.presenter = presenter
+//        UINavigationController(rootViewController: DetailsViewController(detailView: detailView, presenter: presenter))
+        window.rootViewController = TabBarController()
         self.window = window
         window.makeKeyAndVisible()
     }
