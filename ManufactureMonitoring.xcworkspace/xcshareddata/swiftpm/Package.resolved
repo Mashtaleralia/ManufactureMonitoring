@@ -1,0 +1,15 @@
+{
+  "originHash" : "781854bd6c87d203292d44a4f7fda8f78cc20fe5206779047eac09071e1b3698",
+  "pins" : [
+    {
+      "identity" : "ganttis",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/DlhSoftTeam/Ganttis",
+      "state" : {
+        "revision" : "03efd40f134d9c4a6b5cacfc7a20b92af1e96281",
+        "version" : "2.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}

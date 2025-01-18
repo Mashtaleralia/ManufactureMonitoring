@@ -26,6 +26,7 @@
 		84819C9F2D2C6412002FCA86 /* ParentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84819C9E2D2C6412002FCA86 /* ParentControl.swift */; };
 		84819CA12D2FD47A002FCA86 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84819CA02D2FD47A002FCA86 /* Colors.swift */; };
 		84D9C6112D3C1F86007A2EED /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D9C6102D3C1F86007A2EED /* TabBarController.swift */; };
+		84D9C6142D3C2CDC007A2EED /* Ganttis in Frameworks */ = {isa = PBXBuildFile; productRef = 84D9C6132D3C2CDC007A2EED /* Ganttis */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0E77B2253098A71D03684C /* Pods_ManufactureMonitoring.framework in Frameworks */,
+				84D9C6142D3C2CDC007A2EED /* Ganttis in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +195,9 @@
 			dependencies = (
 			);
 			name = ManufactureMonitoring;
+			packageProductDependencies = (
+				84D9C6132D3C2CDC007A2EED /* Ganttis */,
+			);
 			productName = ManufactureMonitoring;
 			productReference = 840447012CD6323B0025D057 /* ManufactureMonitoring.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 840446F82CD6323B0025D057;
+			packageReferences = (
+				84D9C6122D3C2CDC007A2EED /* XCRemoteSwiftPackageReference "Ganttis" */,
+			);
 			productRefGroup = 840447022CD6323B0025D057 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -517,6 +525,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84D9C6122D3C2CDC007A2EED /* XCRemoteSwiftPackageReference "Ganttis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DlhSoftTeam/Ganttis";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84D9C6132D3C2CDC007A2EED /* Ganttis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84D9C6122D3C2CDC007A2EED /* XCRemoteSwiftPackageReference "Ganttis" */;
+			productName = Ganttis;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 840446F92CD6323B0025D057 /* Project object */;
 }
