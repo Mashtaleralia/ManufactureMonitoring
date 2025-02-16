@@ -39,7 +39,7 @@ class DetailsViewController: UIViewController {
         searchBar.delegate = self
         //setUpView()
         navigationItem.titleView = searchBar
-        print(DBHelper.shared.details(name: "Пята"))
+        //print(DBHelper.shared.details(name: "Пята"))
         navigationController?.navigationBar.prefersLargeTitles = true
         hideKeyboardWhenTappedAround()
     }

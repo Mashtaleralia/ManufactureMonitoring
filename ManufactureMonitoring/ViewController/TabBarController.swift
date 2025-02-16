@@ -21,7 +21,7 @@ class TabBarController: UITabBarController {
         detailView.presenter = presenter
         let detailsVC = DetailsViewController(detailView: detailView, presenter: presenter)
         
-        let manufactoringProcessVC = UIViewController()
+        let manufactoringProcessVC = TechnicalProcessViewController()
         
         let nav1 = UINavigationController(rootViewController: detailsVC)
         let nav2 = UINavigationController(rootViewController: manufactoringProcessVC)

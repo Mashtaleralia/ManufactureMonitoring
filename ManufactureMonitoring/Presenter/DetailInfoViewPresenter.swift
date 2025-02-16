@@ -44,5 +44,4 @@ class DetailInfoViewPresenter {
         return DBHelper.shared.detail(by: String(detail.parent))
     }
     
-    
 }

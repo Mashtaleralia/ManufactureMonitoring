@@ -1,0 +1,6 @@
+framework module Pods_ManufactureMonitoring {
+  umbrella header "Pods-ManufactureMonitoring-umbrella.h"
+
+  export *
+  module * { export * }
+}
